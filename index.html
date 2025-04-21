@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio - Final</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+
+  
+</head>
+<body>
+
+
+<nav>
+  <div class="logo">Developer <span>X.</span></div>
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+  <ul id="nav-menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#Certificates & Education"> Certificates & Education</a> </li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:somayaahmadi644@gmail.com?subject=Contact%20Request&body=Hello%20Somaya,%0D%0AI%20would%20like%20to%20get%20in%20touch%20with%20you%20regarding%20your%20services." class="contact-btn" style="text-decoration: none;">Contact me</a>
+
+</nav>
+
+<!-- Other sections like Hero, About, Services, etc., go here -->
+
+ <script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script> 
+
+
+<section class="hero" id="home">
+  <div class="hero-left">
+    <h3>Hi, there!</h3>
+    <h4>I am Somaya Ahmadi.</h4>
+    <h1>I am a <span class="typing role" id="role-text"></span></h1>
+    <p>Hello! I am a passionate and creative individual who loves turning ideas into beautiful, user-friendly digital experiences.</p>
+    <div class="socials">
+      <a href="https://x.com/SomayaAhma28748" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/somaya-ahmadi-b392202a3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/somaya369" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    
+    <div class="buttons">
+      <a href="mailto:somayaahmadi644@gmail.com?subject=Project%20Inquiry&body=Hello%20Somaya,%0D%0A%0D%0AI%20am%20interested%20in%20working%20with%20you%20on%20a%20web%20design%20or%20development%20project.%20Please%20let%20me%20know%20your%20availability%20and%20rates.%0D%0A%0D%0AThank%20you!" class="btn-hire">Hire me</a>
+
+      <a href="Image/Somaya Ahmadi CV  .pdf" class="btn-cv" download>
+        <i class="fas fa-download"></i> Download CV
+      </a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="Image/pic.png" alt="Your Photo">
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-container">
+    <div class="about-image " >
+      <img src="Image/pictuer.png" alt="Profile"  />
+    </div>
+    <div class="about-info">
+      <h2>I am <span class="highlight">Product Designer</span><br />& Web Developer</h2>
+      <ul>
+        <li><strong>Experience:</strong> 2 Years</li>
+        <li><strong>Specialty:</strong> Graphic Designer, Product Designer, Developer</li>
+        <li><strong>Address:</strong> Herat ,Afghanistan</li>
+        <li><strong>Email:</strong> somayaahmadi644@gmail.com</li>
+        <li><strong>Phone:</strong> +93 748588456 </li>
+        <li><strong>Freelance:</strong> Available</li>
+      </ul>
+      <a href="#portfolio" class="view-projects-btn">Explore My Projects</a>
+
+    </div>
+  </div>
+</section>
+<section class="cert-tree" id="Certificates & Education" >
+  <h2 class="section-title"><span>My</span> Certificates <span>&</span> Education</h2>
+  <div class="timeline">
+    
+    <div class="timeline-container left">
+      <div class="timeline-content" data-aos="fade-right" data-aos-duration="1000">
+        <i class="fas fa-laptop-code" style="color:#00bfff;"></i>
+        <h3>Web Design Certificate</h3>
+        <span class="date">2023</span>
+        <p>WASSA, Herat, Afghanistan.</p>
+      </div>
+    </div>
+
+    <div class="timeline-container right">
+      <div class="timeline-content" data-aos="fade-left" data-aos-duration="1000">
+        <i class="fas fa-paint-brush" style="color:#00bfff;"></i>
+        <h3>Graphic Design</h3>
+        <span class="date">Oct 2023 – Jun 2024</span>
+        <p>9-month graphic design course by CTI, Afghanistan.</p>
+      </div>
+    </div>
+
+    <div class="timeline-container left">
+      <div class="timeline-content" data-aos="fade-right" data-aos-duration="1000">
+        <i class="fas fa-project-diagram" style="color:#00bfff;"></i>
+        <h3>Foundations of Project Management</h3>
+        <span class="date">Online – Feb 23, 2025</span>
+        <p>Intro course on project tools & leadership by Google via Coursera.</p>
+      </div>
+    </div>
+
+    <div class="timeline-container right">
+      <div class="timeline-content" data-aos="fade-left" data-aos-duration="1000">
+        <i class="fas fa-image" style="color:#00bfff;"></i>
+        <h3>Photoshop for Beginners: Generative AI</h3>
+        <span class="date">Online – Feb 5, 2025</span>
+        <p>Learned AI image generation and editing via Coursera Project Network.</p>
+      </div>
+    </div>
+
+    <div class="timeline-container left">
+      <div class="timeline-content" data-aos="fade-right" data-aos-duration="1000">
+        <i class="fas fa-language" style="color:#00bfff;"></i>
+        <h3>English for Workplace: Basic Level</h3>
+        <span class="date">Online – Feb 12, 2025</span>
+        <p>Workplace English course by Pontificia Universidad Católica de Chile.</p>
+      </div>
+    </div>
+
+    <div class="timeline-container right">
+      <div class="timeline-content" data-aos="fade-left" data-aos-duration="1000">
+        <i class="fas fa-code-branch" style="color:#00bfff;"></i>
+        <h3>The Full Stack</h3>
+        <span class="date">Online – Mar 9, 2025</span>
+        <p>Full stack development course by Meta (front & back-end skills).</p>
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+<!-- ✅ PORTFOLIO SECTION WITH MULTIPLE MODALS -->
+<section class="portfolio" id="portfolio">
+  <h2 class="section-title"><span>My</span> Portfolio</h2>
+  <div class="portfolio-boxes">
+
+    <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" onclick="openModal('modal1')">
+      <img src="Image/FireShot Capture 215 - Sunset Flavor - Amazing & Delicious Food - [].png" alt="Project 1" />
+      <div class="content">
+        <small>Website Design</small>
+        <h4>Sunset Flavor Restaurant</h4>
+        <p>A luxury restaurant website showcasing authentic flavors.</p>
+      </div>
+    </div>
+
+    <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" onclick="openModal('modal2')">
+      <img src="Image/FireShot Capture 203 - Whac a Mole - [].png" alt="Project 2" />
+      <div class="content">
+        <small>Game</small>
+        <h4>Whac-A-Mole Game</h4>
+        <p>A fast-paced browser game for fun interaction.</p>
+      </div>
+    </div>
+
+    <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" onclick="openModal('modal3')">
+      <img src="Image/FireShot Capture 216 - Advanced Clinic - [].png" alt="Project 3" />
+      <div class="content">
+        <small>Website Design</small>
+        <h4>Doctery Website</h4>
+        <p>Modern clinic website offering easy health access.</p>
+      </div>
+    </div>
+
+    <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" onclick="openModal('modal4')">
+      <img src="Image/FireShot Capture 202 - Document - [].png" alt="Project 4" />
+      <div class="content">
+        <small>Website Design</small>
+        <h4>Personal Cook Book</h4>
+        <p>Recipe-sharing site bringing together flavorful dishes from around the world.</p>
+      </div>
+    </div>
+
+    <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" onclick="openModal('modal5')">
+      <img src="Image/FireShot Capture 214 - WebProg.io - [].png" alt="Project 5" />
+      <div class="content">
+        <small>Dashboard</small>
+        <h4>Dashify Website</h4>
+        <p>Admin dashboard visualizing users, stats, and orders in an intuitive way.</p>
+      </div>
+    </div>
+
+    <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" onclick="openModal('modal6')">
+      <img src="Image/FireShot Capture 213 - Second project - [].png" alt="Project 6" />
+      <div class="content">
+        <small>Landing Page</small>
+        <h4>KavaLaunch Website</h4>
+        <p>Landing page for launching products or events with nature-inspired visuals.</p>
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ✅ MODALS 1–6 -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h3>Sunset Flavor Restaurant</h3>
+    <p>Modern restaurant website built with HTML, CSS, JS. Features menus, contact form, and animations.</p>
+    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+    <img src="Image/FireShot Capture 215 - Sunset Flavor - Amazing & Delicious Food - [].png" alt="Project Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
+    <div style="margin-top: 1rem;">
+      
+      <a href=" https://somaya369.github.io/restaurant-project/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Live Preview</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h3>Whac-A-Mole Game</h3>
+    <p>A fun interactive browser game where users click moles for points. Fast, dynamic, and entertaining.</p>
+    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+    <img src="Image/FireShot Capture 203 - Whac a Mole - [].png" alt="Game Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
+    <div style="margin-top: 1rem;">
+    
+      <a href=" https://somaya369.github.io/Game/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Play Now</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <h3>Doctery Website</h3>
+    <p>Responsive health service website with doctor info, booking, and clinic introduction.</p>
+    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+    <img src="Image/FireShot Capture 216 - Advanced Clinic - [].png" alt="Clinic Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
+    <div style="margin-top: 1rem;">
+      
+      <a href=" https://somaya369.github.io/final-bootstrap-project/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Live Preview</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal4')">&times;</span>
+    <h3>Personal Cook Book</h3>
+    <p>A clean and elegant recipe-sharing website built for food lovers worldwide.</p>
+    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+    <img src="Image/FireShot Capture 202 - Document - [].png" alt="Cook Book Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
+    <div style="margin-top: 1rem;">
+   
+      <a href="https://somaya369.github.io/personal-book-cook-site/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Live Preview</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal5')">&times;</span>
+    <h3>Dashify Website</h3>
+    <p>An admin dashboard template with dynamic data and clean layout.</p>
+    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+    <img src="Image/FireShot Capture 214 - WebProg.io - [].png" alt="Dashboard Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
+    <div style="margin-top: 1rem;">
+     
+      <a href="https://somaya369.github.io/threed-project/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Live Preview</a>
+    </div>
+  </div>
+</div>
+
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal6')">&times;</span>
+    <h3>KavaLaunch Website</h3>
+    <p>A landing page designed with a natural aesthetic, perfect for launches.</p>
+    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+    <img src="Image/FireShot Capture 213 - Second project - [].png" alt="KavaLaunch Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
+    <div style="margin-top: 1rem;">
+
+      <a href=" https://somaya369.github.io/bootstrap-pro-2/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Live Preview</a>
+    </div>
+  </div>
+</div>
+
+</section>
+<section class="services" id="services">
+  <h2><span>My</span> Services</h2>
+  <div class="service-boxes">
+
+    <div class="service-card">
+      <div class="icon-wrap bounce"><i class="fas fa-paint-brush"></i></div>
+      <h3>Web Design</h3>
+      <p>Modern, responsive, user-friendly designs using Figma & Adobe XD.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap rotate"><i class="fas fa-code"></i></div>
+      <h3>Frontend Development</h3>
+      <p>HTML, CSS, JS, React, Angular — creating interactive web apps.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap pulse"><i class="fas fa-terminal"></i></div>
+      <h3>Full Stack Projects</h3>
+      <p>Backend with Node.js & Frontend with modern frameworks.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap bounce"><i class="fas fa-photo-video"></i></div>
+      <h3>Graphic Design</h3>
+      <p>Logos, flyers, banners & more using Photoshop & Illustrator.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap rotate"><i class="fas fa-video"></i></div>
+      <h3>Video Editing</h3>
+      <p>Editing promotional videos & reels using Adobe tools.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap pulse"><i class="fas fa-chalkboard-teacher"></i></div>
+      <h3>Teaching</h3>
+      <p>Experienced teacher in English, computer, and digital skills.</p>
+    </div>
+
+  </div>
+</section>
+<!-- ✅ MODAL JS -->
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+  </script>
+
+<!-- ✅ SMART CONTACT SECTION -->
+<!-- ✅ SMART CONTACT SECTION -->
+<section class="contact" id="contact">
+  <h2 class="section-title"><span>Contact</span> Me</h2>
+  <form id="contact-form" class="contact-form" data-aos="fade-up" data-aos-duration="1000">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="form-response" class="form-response"></p>
+  </form>
+</section>
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const response = document.getElementById("form-response");
+  
+    const formData = new FormData(form);
+    fetch("https://formsubmit.co/ajax/somayaahmadi644@gmail.com", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: formData,
+    })
+      .then(res => res.json())
+      .then(data => {
+        response.classList.remove("error", "success", "show");
+        if (data.success === "true") {
+          response.textContent = "✅ Message sent successfully!";
+          response.classList.add("success", "show");
+          form.reset();
+        } else {
+          response.textContent = "⚠️ Failed to send message. Please try again.";
+          response.classList.add("error", "show");
+        }
+      })
+      .catch(() => {
+        response.textContent = "❌ Error connecting to the server.";
+        response.classList.remove("success");
+        response.classList.add("error", "show");
+      });
+  });
+  </script>
+  
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Somaya Ahmadi. All Rights Reserved.</p>
+</footer>
+
+ <script>
+  const roles = ["Frontend Engineer", "Web Developer", "UI/UX Designer", "Freelancer"];
+  let current = 0;
+  let i = 0;
+  const roleText = document.getElementById("role-text");
+  function typeRole() {
+    if (i < roles[current].length) {
+      roleText.textContent += roles[current].charAt(i);
+      i++;
+      setTimeout(typeRole, 100);
+    } else {
+      setTimeout(eraseRole, 2000);
+    }
+  }
+  function eraseRole() {
+    if (i > 0) {
+      roleText.textContent = roles[current].substring(0, i - 1);
+      i--;
+      setTimeout(eraseRole, 50);
+    } else {
+      current = (current + 1) % roles.length;
+      setTimeout(typeRole, 500);
+    }
+  }
+  document.addEventListener("DOMContentLoaded", typeRole);
+</script> 
+</body>
+</html>
