@@ -749,3 +749,78 @@ footer {
   color: white;
   padding: 4rem 5%;
 }
+/* language  */
+.skills {
+  padding: 50px 0;
+  background-color: #0d0d0d;
+  color: white;
+  text-align: center;
+}
+.skill-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+.skill-circles {
+  display: flex;
+  gap: 30px;
+  min-width: 300px;
+}
+.skill-nav {
+  background: #00bfff;
+  color: #fff;
+  border: none;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.skill-nav:hover {
+  background: #0077b6;
+}
+.skill-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+}
+.skill-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+}
+.circular-chart {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 8px;
+}
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 4;
+}
+.circle {
+  fill: none;
+  stroke: #00bfff;
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke 0.3s;
+}
+.percentage {
+  font-size: 0.5rem;
+  font-weight: bold;
+  fill: #00bfff;
+  dominant-baseline: middle;
+  transition: font-size 0.3s, fill 0.3s;
+}
+.skill-circle:hover .percentage {
+  font-size: 0.6rem;
+  fill: #0077b6;
+}
+/* p {
+  margin: 0;
+  font-weight: 500;
+} */
