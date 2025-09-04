@@ -23,6 +23,7 @@
   <ul id="nav-menu">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#skills">My Skills</a></li>
     <li><a href="#Certificates & Education"> Certificates & Education</a> </li>
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
@@ -65,14 +66,14 @@
     </div>
   </div>
   <div class="hero-right">
-    <img src="Image/pic.png" alt="Your Photo">
+    <img src="Image/photo_2025-09-04_09-47-57.jpg" alt="Your Photo">
   </div>
 </section>
 
 <section class="about" id="about">
   <div class="about-container">
     <div class="about-image " >
-      <img src="Image/pictuer.png" alt="Profile"  />
+      <img src="Image/ChatGPT Image Sep 4, 2025, 10_23_39 AM.png" alt="Profile"  />
     </div>
     <div class="about-info">
       <h2>I am <span class="highlight">Product Designer</span><br />& Web Developer</h2>
@@ -89,6 +90,86 @@
     </div>
   </div>
 </section>
+<!-- language -->
+ 
+<!-- CIRCULAR SKILLS SECTION -->
+<section class="skills" id="skills">
+  <h2 class="section-title"><span>My</span> Skills</h2>
+  <div class="skill-slider">
+    <button class="skill-nav skill-prev" onclick="slideSkills(-1)">&#10094;</button>
+    <div class="skill-circles" id="skill-circles"></div>
+    <button class="skill-nav skill-next" onclick="slideSkills(1)">&#10095;</button>
+  </div>
+</section>
+
+<script>
+const skills = [
+  { name: "HTML", percent: 100 },
+  { name: "CSS", percent: 95 },
+  { name: "Bootstrap", percent: 90 },
+  { name: "JavaScript", percent: 80 },
+  { name: "Git", percent: 90 },
+  { name: "Github", percent: 90 },
+  { name: "Photoshop", percent: 95 },
+  { name: "Adobe Illustrator", percent: 90 },
+  { name: "Adobe Indesign", percent: 95 }
+];
+
+let skillIndex = 0;
+const skillsPerSlide = 3;
+
+function renderSkills() {
+  const container = document.getElementById("skill-circles");
+  container.innerHTML = "";
+  for (let i = skillIndex; i < skillIndex + skillsPerSlide && i < skills.length; i++) {
+    const skill = skills[i];
+    container.innerHTML += `
+      <div class="skill-circle">
+        <svg viewBox="0 0 36 36" class="circular-chart">
+          <circle class="circle-bg" cx="18" cy="18" r="16"/>
+          <circle class="circle" cx="18" cy="18" r="16" stroke-dasharray="0,100"/>
+          <text x="18" y="22" text-anchor="middle" class="percentage">${skill.percent}%</text>
+        </svg>
+        <p>${skill.name}</p>
+      </div>
+    `;
+  }
+  setTimeout(animateCircles, 100);
+}
+
+function animateCircles() {
+  document.querySelectorAll('.skill-circle .circle').forEach((circle, idx) => {
+    const percent = skills[skillIndex + idx]?.percent || 0;
+    let current = 0;
+    const target = percent;
+    const step = Math.max(1, Math.floor(target / 50));
+    circle.setAttribute('stroke-dasharray', `0,100`);
+
+    function animate() {
+      if (current < target) {
+        current += step;
+        circle.setAttribute('stroke-dasharray', `${current},100`);
+        requestAnimationFrame(animate);
+      } else {
+        circle.setAttribute('stroke-dasharray', `${target},100`);
+      }
+    }
+    animate();
+  });
+}
+
+function slideSkills(direction) {
+  const maxIndex = skills.length - skillsPerSlide;
+  skillIndex += direction * skillsPerSlide;
+  if (skillIndex < 0) skillIndex = 0;
+  if (skillIndex > maxIndex) skillIndex = maxIndex;
+  renderSkills();
+}
+
+window.addEventListener("load", renderSkills);
+</script>
+
+
 <section class="cert-tree" id="Certificates & Education" >
   <h2 class="section-title"><span>My</span> Certificates <span>&</span> Education</h2>
   <div class="timeline">
@@ -108,6 +189,7 @@
         <h3>Graphic Design</h3>
         <span class="date">Oct 2023 – Jun 2024</span>
         <p>9-month graphic design course by CTI, Afghanistan.</p>
+         <a href="Image/photo_2024-07-29_20-28-08.jpg" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px; margin-top: 10px;">view certificate</a>
       </div>
     </div>
 
@@ -117,6 +199,7 @@
         <h3>Foundations of Project Management</h3>
         <span class="date">Online – Feb 23, 2025</span>
         <p>Intro course on project tools & leadership by Google via Coursera.</p>
+          <a href="https://coursera.org/verify/Z4FDYIMLMOCE " target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view certificate</a>
       </div>
     </div>
 
@@ -126,6 +209,7 @@
         <h3>Photoshop for Beginners: Generative AI</h3>
         <span class="date">Online – Feb 5, 2025</span>
         <p>Learned AI image generation and editing via Coursera Project Network.</p>
+         <a href="https://coursera.org/verify/2LY5O4QW5PWH" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view certificate</a>
       </div>
     </div>
 
@@ -135,6 +219,7 @@
         <h3>English for Workplace: Basic Level</h3>
         <span class="date">Online – Feb 12, 2025</span>
         <p>Workplace English course by Pontificia Universidad Católica de Chile.</p>
+               <a href="https://coursera.org/verify/8KH78ULX5VFR  " target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view certificate</a>
       </div>
     </div>
 
@@ -144,10 +229,19 @@
         <h3>The Full Stack</h3>
         <span class="date">Online – Mar 9, 2025</span>
         <p>Full stack development course by Meta (front & back-end skills).</p>
-        
+             <a href="https://coursera.org/verify/GC3SIB318CTE " target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view certificate</a>
+
       </div>
     </div>
-
+    <div class="timeline-container left">
+      <div class="timeline-content" data-aos="fade-right" data-aos-duration="1000">
+      <i class="fas fa-code-branch" style="color:#00bfff;"></i>
+        <h3>Frontend Development</h3>
+        <span class="date">2025-present</span>
+        <p>Frontend development course by CTI (HTML, CSS, JavaScript,Bootstrap, Git, github).</p>
+              
+      </div>
+    </div>
   </div>
 </section>
 
@@ -159,17 +253,20 @@
 
 
 
-<!-- ✅ PORTFOLIO SECTION WITH MULTIPLE MODALS -->
+<!-- ✅ PORTFOLIO SECTION -->
+<!-- ✅ PORTFOLIO SECTION FOR SINGLE PAGE -->
 <section class="portfolio" id="portfolio">
   <h2 class="section-title"><span>My</span> Portfolio</h2>
   <div class="portfolio-boxes">
 
+    <!-- ۴ پروژه ثابت -->
     <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" onclick="openModal('modal1')">
       <img src="Image/FireShot Capture 215 - Sunset Flavor - Amazing & Delicious Food - [].png" alt="Project 1" />
       <div class="content">
         <small>Website Design</small>
         <h4>Sunset Flavor Restaurant</h4>
         <p>A luxury restaurant website showcasing authentic flavors.</p>
+        <a href="https://somaya369.github.io/restaurant-project/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
       </div>
     </div>
 
@@ -179,6 +276,7 @@
         <small>Game</small>
         <h4>Whac-A-Mole Game</h4>
         <p>A fast-paced browser game for fun interaction.</p>
+        <a href="https://somaya369.github.io/Game/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
       </div>
     </div>
 
@@ -188,6 +286,7 @@
         <small>Website Design</small>
         <h4>Doctery Website</h4>
         <p>Modern clinic website offering easy health access.</p>
+        <a href=" https://somaya369.github.io/final-bootstrap-project/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
       </div>
     </div>
 
@@ -197,117 +296,118 @@
         <small>Website Design</small>
         <h4>Personal Cook Book</h4>
         <p>Recipe-sharing site bringing together flavorful dishes from around the world.</p>
+        <a href="https://somaya369.github.io/personal-book-cook-site/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
       </div>
     </div>
-
-    <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" onclick="openModal('modal5')">
+  <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" onclick="openModal('modal4')">
       <img src="Image/FireShot Capture 214 - WebProg.io - [].png" alt="Project 5" />
-      <div class="content">
-        <small>Dashboard</small>
-        <h4>Dashify Website</h4>
-        <p>Admin dashboard visualizing users, stats, and orders in an intuitive way.</p>
+        <div class="content">
+          <small>Dashboard</small>
+          <h4>Dashify Website</h4>
+          <p>Analytics dashboard for tracking user engagement and performance.</p>
+          <a href="https://somaya369.github.io/threed-project/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
       </div>
     </div>
-
-    <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" onclick="openModal('modal6')">
-      <img src="Image/FireShot Capture 213 - Second project - [].png" alt="Project 6" />
-      <div class="content">
-        <small>Landing Page</small>
-        <h4>KavaLaunch Website</h4>
-        <p>Landing page for launching products or events with nature-inspired visuals.</p>
-        
-      </div>
+      <div class="portfolio-card" data-aos="fade-up" data-aos-duration="1000" onclick="openModal('modal4')">
+       <img src="Image/FireShot Capture 213 - Second project - [].png" alt="Project 6" />
+        <div class="content">
+          <small>Landing Page</small>
+          <h4>KavaLaunch Website</h4>
+          <p>Landing page for launching products or events with nature-inspired visuals.</p>
+          <a href="https://somaya369.github.io/bootstrap-pro-2/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
+        </div>
     </div>
+  </div>
 
+  <!-- دکمه See All Projects -->
+  <div style="text-align: center; margin-top: 2rem;">
+    <button class="btn-hire" onclick="openModal('allProjectsModal')">See All Projects</button>
   </div>
 </section>
 
-<!-- ✅ MODALS 1–6 -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal1')">&times;</span>
-    <h3>Sunset Flavor Restaurant</h3>
-    <p>Modern restaurant website built with HTML, CSS, JS. Features menus, contact form, and animations.</p>
-    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
-    <img src="Image/FireShot Capture 215 - Sunset Flavor - Amazing & Delicious Food - [].png" alt="Project Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
-    <div style="margin-top: 1rem;">
-      
-      <a href=" https://somaya369.github.io/restaurant-project/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Live Preview</a>
-    </div>
-  </div>
-</div>
-
-<div id="modal2" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal2')">&times;</span>
-    <h3>Whac-A-Mole Game</h3>
-    <p>A fun interactive browser game where users click moles for points. Fast, dynamic, and entertaining.</p>
-    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
-    <img src="Image/FireShot Capture 203 - Whac a Mole - [].png" alt="Game Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
-    <div style="margin-top: 1rem;">
+<!-- ✅ MODAL FOR ALL PROJECTS -->
+<div id="allProjectsModal" class="modal">
+  <div class="modal-content" style="max-width: 90%; height: 90%; overflow-y: auto;">
+    <span class="close" onclick="closeModal('allProjectsModal')">&times;</span>
+    <h3 style="text-align: center;">All Projects</h3>
     
-      <a href=" https://somaya369.github.io/Game/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Play Now</a>
+    <div class="portfolio-boxes" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+      <!-- پروژه ۵ -->
+      <div class="portfolio-card" onclick="openModal('modal5')">
+        <img src="Image/screencapture-somaya369-github-io-Afghan-Proverbs-2025-09-03-09_25_02.png" alt="Project 5" />
+        <div class="content">
+          <small>website design</small>
+          <h4>Afghan Proverbs</h4>
+          <p>A website dedicated to showcasing and preserving Afghan proverbs and their meanings.</p>
+          <a href=" https://somaya369.github.io/-Afghan-Proverbs-/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
+        </div>
+      </div>
+      <!-- پروژه ۶ -->
+      <div class="portfolio-card" onclick="openModal('modal6')">
+        <img src="Image/screencapture-somaya369-github-io-Digitai-Clock-Project-2025-09-03-09_30_29.png" alt="Project 6" />
+        <div class="content">
+          <small>Website Design</small>
+          <h4>Digital clock</h4>
+          <p>A simple digital clock displaying the current time.</p>
+          <a href=" https://somaya369.github.io/Digitai-Clock-Project/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
+        </div>
+      </div>
+            <!-- پروژه ۶ -->
+      <div class="portfolio-card" onclick="openModal('modal6')">
+        <img src="Image/Screenshot 2025-09-03 095026.png" alt="Project 6" />
+        <div class="content">
+          <small>Website Design</small>
+          <h4>Foodelo</h4>
+          <p>A recipe-sharing platform connecting food lovers worldwide.</p>
+          <a href="  https://somaya369.github.io/Food-hub-sit/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
+        </div>
+      </div>
+        <!-- پروژه 8 -->
+      <div class="portfolio-card" onclick="openModal('modal6')">
+        <img src="Image/Screenshot 2025-09-03 095427 coffe.png" alt="Project 6" />
+        <div class="content">
+          <small>Website Design</small>
+          <h4>Coffee site</h4>
+          <p>A platform for coffee enthusiasts to share and discover coffee recipes.</p>
+          <a href=" https://somaya369.github.io/coffee-project/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
+        </div>
+      </div>
+        <!-- پروژه 9 -->
+      <div class="portfolio-card" onclick="openModal('modal6')">
+        <img src="Image/Screenshot 2025-09-03 095756 zombie.png" alt="Project 6" />
+        <div class="content">
+          <small>Game</small>
+          <h4>Zombie Street Shootout</h4>
+          <p>A thrilling zombie shooter game set in a post-apocalyptic world.</p>
+          <a href="https://somaya369.github.io/Zombie-Street-Shootout/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
+        </div>
+      </div>
+        <!-- پروژه 10 -->
+      <div class="portfolio-card" onclick="openModal('modal6')">
+        <img src="Image/Screenshot 2025-09-03 101354 Game.png" alt="Project 6" />
+        <div class="content">
+          <small>Game</small>
+          <h4>Game site</h4>
+          <p>A thrilling zombie shooter game set in a post-apocalyptic world.</p>
+          <a href="  https://somaya369.github.io/Gaming-site/" target="_blank" class="btn-hire " style="margin-left: 1rem; text-decoration: none; padding: 5px;">view My project</a>
+        </div>
+      </div>
+      <!-- میتونی پروژه‌های بعدی رو اینجا اضافه کنی -->
     </div>
   </div>
 </div>
 
-<div id="modal3" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal3')">&times;</span>
-    <h3>Doctery Website</h3>
-    <p>Responsive health service website with doctor info, booking, and clinic introduction.</p>
-    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
-    <img src="Image/FireShot Capture 216 - Advanced Clinic - [].png" alt="Clinic Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
-    <div style="margin-top: 1rem;">
-      
-      <a href=" https://somaya369.github.io/final-bootstrap-project/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Live Preview</a>
-    </div>
-  </div>
-</div>
+<script>
+  // باز و بستن مدال
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+</script>
 
-<div id="modal4" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal4')">&times;</span>
-    <h3>Personal Cook Book</h3>
-    <p>A clean and elegant recipe-sharing website built for food lovers worldwide.</p>
-    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
-    <img src="Image/FireShot Capture 202 - Document - [].png" alt="Cook Book Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
-    <div style="margin-top: 1rem;">
-   
-      <a href="https://somaya369.github.io/personal-book-cook-site/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Live Preview</a>
-    </div>
-  </div>
-</div>
 
-<div id="modal5" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal5')">&times;</span>
-    <h3>Dashify Website</h3>
-    <p>An admin dashboard template with dynamic data and clean layout.</p>
-    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
-    <img src="Image/FireShot Capture 214 - WebProg.io - [].png" alt="Dashboard Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
-    <div style="margin-top: 1rem;">
-     
-      <a href="https://somaya369.github.io/threed-project/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Live Preview</a>
-    </div>
-  </div>
-</div>
-
-<div id="modal6" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal6')">&times;</span>
-    <h3>KavaLaunch Website</h3>
-    <p>A landing page designed with a natural aesthetic, perfect for launches.</p>
-    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
-    <img src="Image/FireShot Capture 213 - Second project - [].png" alt="KavaLaunch Screenshot" style="width: 100%; margin-top: 1rem; border-radius: 10px;" />
-    <div style="margin-top: 1rem;">
-
-      <a href=" https://somaya369.github.io/bootstrap-pro-2/" target="_blank" class="btn-hire" style="margin-left: 1rem;">Live Preview</a>
-    </div>
-  </div>
-</div>
-
-</section>
 <section class="services" id="services">
   <h2><span>My</span> Services</h2>
   <div class="service-boxes">
@@ -352,6 +452,12 @@
 </section>
 <!-- ✅ MODAL JS -->
 <script>
+  window.addEventListener('load', () => {
+  document.querySelectorAll('.skill-circle .circle').forEach(circle => {
+    const dashArray = circle.getAttribute('stroke-dasharray').split(',')[0];
+    circle.style.strokeDasharray = dashArray + ', 100';
+  });
+});
   function openModal(id) {
     document.getElementById(id).style.display = 'block';
   }
@@ -373,6 +479,7 @@
   </form>
 </section>
 <script>
+ 
   document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
     const form = e.target;
